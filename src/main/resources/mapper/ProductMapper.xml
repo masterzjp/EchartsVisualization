@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zjp.echartsdemo.echartsdemo.dao.ProductMapper">
+    <resultMap id="BaseResultMap" type="com.zjp.echartsdemo.echartsdemo.entity.Product">
+        <result column="product_name" jdbcType="VARCHAR" property="productName" />
+        <result column="nums" jdbcType="INTEGER" property="nums" />
+    </resultMap>
+    <sql id="Base_Column_List">
+    name, age
+  </sql>
+    <select id="SelectAll" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select
+         product_name,nums
+        from product
+    </select>
+</mapper>
